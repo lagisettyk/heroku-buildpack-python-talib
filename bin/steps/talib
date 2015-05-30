@@ -38,7 +38,7 @@ if (grep -iq -e "TA-Lib" $REQ_TXT) then
   fi
   export TALIB=$(pwd)/vendor/lib/libta/libta_lib.a
   export LIBRARY_PATH=$(pwd)/python/lib:$(pwd)/vendor/lib:$(pwd)/vendor/lib/libta
-  export LD_LIBRARY_PATH=${LD_LIBRARY_PATH}:$(pwd)/python/lib:$(pwd)/vendor/lib:$(pwd)/vendor/lib/libta python -c "import talib; print talib.__ta_version__"
+  export LD_LIBRARY_PATH=${LD_LIBRARY_PATH}:$(pwd)/python/lib:$(pwd)/vendor/lib:$(pwd)/vendor/lib/libta 
 
   puts-step "TALIB direcctory..."
 
