@@ -39,7 +39,7 @@ if (grep -iq -e "TA-Lib" $REQ_TXT) then
     echo $(pwd)
     tar -xvf ${VENDORED_GIT_NAME}/${VENDORED_BINARIES}.tar.gz
   fi
-  export TALIB=$(pwd)/vendor/lib/libta/libta_lib.a
+  export TALIB=$(pwd)/vendor/lib/libta/libta_lib.so
   export LIBRARY_PATH=$(pwd)/python/lib:$(pwd)/vendor/lib:$(pwd)/vendor/lib/libta
   export LD_LIBRARY_PATH=${LD_LIBRARY_PATH}:$(pwd)/python/lib:$(pwd)/vendor/lib:$(pwd)/vendor/lib/libta 
 
