@@ -43,6 +43,8 @@ if (grep -iq -e "TA-Lib" $REQ_TXT) then
   puts-step "TALIB direcctory..."
 
   echo $TALIB
+  echo $LIBRARY_PATH
+  echo $LD_LIBRARY_PATH
 
   puts-step "Downloading TA-Lib Python wrapper and its dependencies (numpy & Cython)."
   pip install numpy
