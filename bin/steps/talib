@@ -9,6 +9,8 @@
 #
 # This script is invoked by [`bin/compile`](/).
 
+echo "Entered talib step"
+
 VENDORED_GIT_NAME="talib-binaries"
 VENDORED_GIT_REPO="git://github.com/aneesh-neelam/${VENDORED_GIT_NAME}.git"
 # The location of the pre-compiled TA-Lib binaries.
@@ -37,6 +39,10 @@ if (grep -iq -e "TA-Lib" $REQ_TXT) then
   export TALIB=$(pwd)/vendor/lib/libta/libta_lib.a
   export LIBRARY_PATH=$(pwd)/python/lib:$(pwd)/vendor/lib:$(pwd)/vendor/lib/libta
   export LD_LIBRARY_PATH=$(pwd)/python/lib:$(pwd)/vendor/lib:$(pwd)/vendor/lib/libta
+
+  puts-step "TALIB direcctory..."
+
+  echo TALIB
 
   puts-step "Downloading TA-Lib Python wrapper and its dependencies (numpy & Cython)."
   pip install numpy
